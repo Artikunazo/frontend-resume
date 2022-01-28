@@ -1,0 +1,11 @@
+.name{
+  font-weight: 300;
+
+  & span{
+    color: var(--main-color) !important;
+  }
+}
+
+.small-bio{
+  color: var(--small-bio-color);
+}

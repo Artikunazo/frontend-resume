@@ -1,0 +1,12 @@
+.main-container{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  
+    & h1, & h2, & h3, & h4, & h5, & h6{
+      font-weight: 300;
+    }
+  }
+  
