@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
+/* App */
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
+
+
 /* Header */
 import { HeaderComponent } from '@components/header/header/header.component';
 import { BasicInfoComponent } from '@components/header/basic-info/basic-info.component';
@@ -24,6 +28,9 @@ import { FooterComponent } from '@footer/footer.component';
 /* Services */
 import { ResumeService } from '@services/resume/resume.service';
 
+/* Assets */
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +48,9 @@ import { ResumeService } from '@services/resume/resume.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [ResumeService],
   bootstrap: [AppComponent]

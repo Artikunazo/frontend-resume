@@ -1,8 +1,22 @@
-<div class="row">
-    <div class="col">
-      <span>Linkedin</span>
-    </div>
-    <div class="col">
-      <span>Github</span>
-    </div>
-</div>
+<ul 
+  *ngIf="socialNetworks" 
+  class="row no-padding width-100"
+>
+  <li 
+    *ngFor="let item of socialNetworks" 
+    class="
+      col-6 
+      text-center-xs
+      social__container 
+    "
+  >
+    <a href="#" class="social__link">
+      <fa-icon 
+        *ngIf="item.name"
+        [icon]="getIcon(item?.name)"
+        [styles]="iconStyles"
+        size="lg"
+      ></fa-icon>
+    </a>
+  </li>
+</ul>

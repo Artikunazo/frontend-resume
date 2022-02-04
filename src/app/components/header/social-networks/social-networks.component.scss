@@ -1,0 +1,9 @@
+.social__container{
+  list-style-type: none;
+
+  & .social__link{
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
+  }
+}

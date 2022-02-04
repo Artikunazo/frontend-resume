@@ -1,6 +1,9 @@
-$main-color: #8444df;
-$main-color-dark: #6a2c9e;
-$small-bio-color: #5F6F81;
-$text-color: #333;
-$background-color: #f7f7f7;
-$logo-color: #773dc8;
+:root{
+    --main-color: #8444df;
+    --main-color-dark: #6a2c9e;
+    --background-color: #f7f7f7;
+    --small-bio-color: #5F6F81;
+    --text-color: #333;
+    --logo-color: #773dc8;
+    --primary-color: var(--main-color);
+}
