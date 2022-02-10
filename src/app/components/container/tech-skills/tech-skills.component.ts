@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ITechSkills } from '@app/models/tech-skills';
 import { ResumeService } from '@services/resume/resume.service';
 import { Subscription } from 'rxjs';
 
@@ -9,8 +8,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./tech-skills.component.scss']
 })
 export class TechSkillsComponent implements OnInit, OnDestroy {
-  
-  skills: ITechSkills[] = [];
+
+  skills: string[] = [];
 
   private _subs = new Subscription();
 
@@ -23,9 +22,31 @@ export class TechSkillsComponent implements OnInit, OnDestroy {
       this._resumeService
       .getInfoByCategory('techSkills')
       .subscribe((skills) => {
-        this.skills = (skills as ITechSkills[]);
+        this.skills = skills;
       })
     );
+  }
+
+  findIconSkill(skill: string): string {
+    skill = skill.toLowerCase();
+
+    if (skill.includes('api rest')) {
+      return '/assets/images/icons/' + 
+        skill.replace(' ', '-') + 
+        '-icon.svg';
+    }
+
+    if(skill.includes('gary-css')){
+      return '/assets/images/icons/open-source-icon.svg';
+    }
+
+    let icon = '/assets/images/icons/' + skill + '-icon.svg';
+
+    if(!icon){
+      icon = '/assets/images/icons/default.svg';
+    }
+
+    return icon;
   }
 
   ngOnDestroy(): void {

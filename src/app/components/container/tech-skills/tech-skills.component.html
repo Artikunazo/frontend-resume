@@ -1,20 +1,22 @@
 <h2>Skills</h2>
+
 <div class="section-container">
-  <ul class="skills-list">
-    <li class="skill-list__item">
-      <fa-icon></fa-icon>
+  <ul class="skills-list" *ngIf="skills else skillsEmpty">
+    <li 
+      *ngFor="let skill of skills"
+      class="skills-list__item text-center"
+    >
+      <figure class="item__figure">
+        <img
+          [src]="findIconSkill(skill)"
+          [alt]="skill + ' icon'"
+          class="icon">
+        <figcaption>{{ skill }}</figcaption>
+      </figure>
+
     </li>
   </ul>
-  <div class="col">
-    <span>HTML</span>
-  </div>
-  <div class="col">
-    <span>CSS</span>
-  </div>
-  <div class="col">
-    <span>JS</span>
-  </div>
-  <div class="col">
-    <span>VS Code</span>
-  </div>
+  <ng-template #skillsEmpty>
+    <p>No skills yet</p>
+  </ng-template>
 </div>
