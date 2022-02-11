@@ -46,7 +46,10 @@
       ],
       "@models/*":[
         "src/app/models/*"
-      ]
+      ],
+      "@helpers/*":[
+        "src/app/helpers/*"
+      ],
     }
   },
   "angularCompilerOptions": {

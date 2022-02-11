@@ -2,6 +2,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/gary-css/gary.min.css';
 @import './assets/css/fonts.css';
+@import './assets/css/_variables.scss';
 
 html, body{
     margin:0;
@@ -27,6 +28,14 @@ html, body{
 .icon{
   height:30px;
   width:30px;
+}
+
+.btn:disabled{
+  cursor: not-allowed;
+}
+.btn:disabled.btn-primary{
+  background-color: var(--main-color-dark);
+  opacity: 0.6;
 }
 
 @media (max-width: 575.98px){
