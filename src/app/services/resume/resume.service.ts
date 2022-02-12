@@ -4,15 +4,16 @@ import { HttpClient } from '@angular/common/http';
 import { IResume } from '@models/resume';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { IApiResponse } from '@app/models/api-response';
-import { ITechSkills } from '@app/models/tech-skills';
+import { IApiResponse } from '@models/api-response';
+import { ITechSkills } from '@models/tech-skills';
+import { IContact } from '@models/contact';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResumeService {
 
-  private resumeApi = 'https://artikunazo-resume.herokuapp.com/v1/resume/all';
+  private resumeApi = 'https://artikunazo-resume.herokuapp.com/v1/resume/';
   private resume$: Subject<IResume> = new Subject();
 
   constructor(
@@ -20,7 +21,7 @@ export class ResumeService {
   ) {}
 
   getResume() : void {
-    this._httpClient.get<IApiResponse>(this.resumeApi)
+    this._httpClient.get<IApiResponse>(this.resumeApi + 'all')
     .pipe(
       map(
         (resume: IApiResponse) => resume.result
@@ -52,5 +53,9 @@ export class ResumeService {
         }
       )
     );
+  }
+
+  sendContactForm(data: IContact) : Observable<any> {
+    return this._httpClient.post(this.resumeApi + 'contact', data);
   }
 }

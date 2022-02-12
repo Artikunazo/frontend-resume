@@ -1,15 +1,25 @@
 /* Forms */
-input {
+input, textarea {
   border: 1px solid #eee;
   padding: 11px 20px;
   font-size: 0.85rem;
   letter-spacing: 1px;
   width: 100%;
   margin: 5px 0;
-  -webkit-transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+}
+
+input{
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+
+textarea{
+  max-width: 100%;
+  max-height: 200px;
+  min-height: 100px;
+  min-width: 100%;
 }
 
 .is-invalid{
@@ -17,4 +27,8 @@ input {
 }
 .is-valid{
   border: 1px solid var(--success-color);
+}
+
+.section-container--form{
+  max-width: 996px;
 }

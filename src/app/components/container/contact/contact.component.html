@@ -1,57 +1,62 @@
 <h2>Contact form</h2>
 
 <div class="section-container">
-  <form [formGroup]="contactForm" class="row" (ngSubmit)="sendForm()">
+  <form 
+    [formGroup]="contactForm" 
+    class="row section-container--form" 
+    (ngSubmit)="sendForm()"
+    autocomplete="false"
+  >
 
-    <div class="xs-12">
-      <input 
-        type="text" 
-        [class.is-invalid]="contactForm.get('name')?.invalid && 
+    <div class="xs-12 sm-12 md-12 lg-12 ">
+      <input
+        type="text"
+        [class.is-invalid]="contactForm.get('name')?.invalid &&
           contactForm.get('name')?.touched"
-        [class.is-valid]="contactForm.get('name')?.valid && 
+        [class.is-valid]="contactForm.get('name')?.valid &&
           contactForm.get('name')?.touched"
-        formControlName="name" 
-        placeholder="Your Name*" 
+        formControlName="name"
+        placeholder="Your Name*"
         required
         />
     </div>
-    
-    <div class="xs-12">
-      <input 
-        type="email" 
+
+    <div class="xs-12 sm-12 md-12 lg-12 ">
+      <input
+        type="email"
         [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
         [class.is-valid]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
-        formControlName="email" 
-        placeholder="Your Email*" 
+        formControlName="email"
+        placeholder="Your Email*"
         required
         />
     </div>
 
-    <div class="xs-12">
-      <input 
-        type="text" 
+    <div class="xs-12 sm-12 md-12 lg-12 ">
+      <input
+        type="text"
         [class.is-invalid]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
         [class.is-valid]="contactForm.get('subject')?.valid && contactForm.get('subject')?.touched"
-        formControlName="subject" 
-        placeholder="Subject*" 
+        formControlName="subject"
+        placeholder="Subject*"
         required
         />
     </div>
 
-    <div class="xs-12">
-      <input 
-        type="text" 
+    <div class="xs-12 sm-12 md-12 lg-12 ">
+      <textarea
+        type="text"
         [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
         [class.is-valid]="contactForm.get('message')?.valid && contactForm.get('message')?.touched"
-        formControlName="message" 
-        placeholder="Your Message*" 
+        formControlName="message"
+        placeholder="Your Message*"
         required
-      />
+      ></textarea>
     </div>
 
-      <div class="xs-12 text-center">
-        <button 
-          type="submit" 
+      <div class="xs sm md lg text-center">
+        <button
+          type="submit"
           class="btn btn-primary"
           [disabled]="contactForm.invalid"
         >

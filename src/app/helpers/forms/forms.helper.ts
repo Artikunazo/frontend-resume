@@ -37,7 +37,7 @@ export class FormsHelper {
             validators: this.getValidators([
                 'required', 
                 'pattern', 
-                'minLength:10', 
+                'minLength:4', 
                 'maxLength:50'
               ])
             }

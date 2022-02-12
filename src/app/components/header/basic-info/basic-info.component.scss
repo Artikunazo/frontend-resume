@@ -4,6 +4,10 @@
   & span{
     color: var(--main-color) !important;
   }
+
+  @media (min-width: 995.98px){
+    font-size: 2.5rem;
+  }
 }
 
 .small-bio{
