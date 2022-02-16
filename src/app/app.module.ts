@@ -14,7 +14,6 @@ import { BasicInfoComponent } from '@components/header/basic-info/basic-info.com
 import { 
   SocialNetworksComponent 
 } from '@components/header/social-networks/social-networks.component';
-import { AppMenuComponent } from '@header/app-menu/app-menu.component';
 
 /* Container */
 import { AboutmeComponent } from '@container/aboutme/aboutme.component';
@@ -44,7 +43,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TechSkillsComponent,
     ProjectsComponent,
     FooterComponent,
-    AppMenuComponent,
 
   ],
   imports: [

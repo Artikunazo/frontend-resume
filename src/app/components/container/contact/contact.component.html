@@ -1,14 +1,14 @@
-<h2>Contact form</h2>
+<h2>Contact me</h2>
 
-<div class="section-container">
-  <form 
-    [formGroup]="contactForm" 
-    class="row section-container--form" 
+<div class="section-container flex-center">
+  <form
+    [formGroup]="contactForm"
+    class="row max-width-768 flex-1-1-100"
     (ngSubmit)="sendForm()"
     autocomplete="false"
   >
 
-    <div class="xs-12 sm-12 md-12 lg-12 ">
+    <div class="xs sm md-6 lg-6">
       <input
         type="text"
         [class.is-invalid]="contactForm.get('name')?.invalid &&
@@ -21,7 +21,7 @@
         />
     </div>
 
-    <div class="xs-12 sm-12 md-12 lg-12 ">
+    <div class="xs sm md-6 lg-6 pl-1">
       <input
         type="email"
         [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
@@ -32,7 +32,7 @@
         />
     </div>
 
-    <div class="xs-12 sm-12 md-12 lg-12 ">
+    <div class="xs sm md lg">
       <input
         type="text"
         [class.is-invalid]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
@@ -43,7 +43,7 @@
         />
     </div>
 
-    <div class="xs-12 sm-12 md-12 lg-12 ">
+    <div class="xs sm md lg">
       <textarea
         type="text"
         [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"

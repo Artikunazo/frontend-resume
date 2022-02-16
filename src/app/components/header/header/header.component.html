@@ -1,22 +1,18 @@
-<div class="menu">
-  <app-menu></app-menu>
-</div>
-
 <div class="row">
-  <!-- <div class="xs-12 sm-12 md-12 lg-12 ">
+  <!-- <div class="xs sm md lg">
     <img src="" alt="">
   </div> -->
-  <div class="xs-12 sm-12 md-12 lg-12 ">
+  <div class="xs sm md lg">
     <basic-info></basic-info>
   </div>
 
-  <div class="xs-12 sm-12 md-12 lg-12 ">
+  <div class="xs sm md lg">
     <div class="row">
-      <div class="xs-12 sm-6 md-6 lg-6 text-center">
-        <button type="button" class="btn btn-primary">Resume</button>
+      <div class="xs sm-6 md-6 lg-6 text-center">
+        <button type="button" class="btn btn-primary" (click)="downloadResume()">Resume</button>
       </div>
 
-      <div class="xs-12 sm-6 md-6 lg-6 text-center">
+      <div class="xs sm-6 md-6 lg-6 text-center">
         <social-networks></social-networks>
       </div>
     </div>

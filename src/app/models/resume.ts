@@ -6,7 +6,7 @@ import { ITechSkills } from './tech-skills';
 
 export interface IResume {
   aboutme: string;
-  basicInfo: IBasicInfo[];
+  basicInfo: IBasicInfo[] | IBasicInfo;
   techSkills: ITechSkills[];
   education: IEducation[];
   experience: IExperience[];
