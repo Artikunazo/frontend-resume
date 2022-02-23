@@ -13,7 +13,7 @@ import { IContact } from '@models/contact';
 })
 export class ResumeService {
 
-  private resumeApi = 'https://artikunazo-resume.herokuapp.com/v1/resume/';
+  private resumeApi = 'https://nth-suprstate-329822.uc.r.appspot.com/v1/resume/';
   private resume$: Subject<IResume> = new Subject();
 
   constructor(
