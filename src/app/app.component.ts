@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ResumeService } from '@services/resume/resume.service';
+import { ResumeService } from '@core/services/resume/resume.service';
 
 @Component({
   selector: 'app-root',

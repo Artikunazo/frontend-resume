@@ -24,19 +24,13 @@
     ],
     "paths": {
       "@header/*": [
-        "src/app/components/header/*"
+        "src/app/modules/core/components/header/*"
       ],
       "@footer/*": [
-        "src/app/components/footer/*"
+        "src/app/modules/core/components/footer/*"
       ],
-      "@container/*": [
-        "src/app/components/container/*"
-      ],
-      "@components/*": [
-        "src/app/components/*"
-      ],
-      "@services/*": [
-        "src/app/services/*"
+      "@modules/*": [
+        "src/app/modules/*"
       ],
       "@app/*": [
         "src/app/*"
@@ -44,11 +38,32 @@
       "@assets/*":[
         "src/assets/*"
       ],
-      "@models/*":[
-        "src/app/models/*"
+      "@core/*": [
+        "src/app/modules/core/*"
       ],
-      "@helpers/*":[
-        "src/app/helpers/*"
+      "@shared/*": [
+        "src/app/modules/shared/*"
+      ],
+      "@aboutme/*": [
+        "src/app/modules/aboutme/*"
+      ],
+      "@contact/*": [
+        "src/app/modules/contact/*"
+      ],
+      "@container/*": [
+        "src/app/modules/container/*"
+      ],
+      "@projects/*": [
+        "src/app/modules/projects/*"
+      ],
+      "@tech-skills/*": [
+        "src/app/modules/tech-skills/*"
+      ],
+      "@social-networks/*": [
+        "src/app/modules/core/components/header/social-networks/*"
+      ],
+      "@basic-info/*": [
+        "src/app/modules/core/components/header/basic-info/*"
       ],
     }
   },
