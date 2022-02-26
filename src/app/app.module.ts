@@ -18,8 +18,6 @@ import { ContainerModule } from '@modules/container/container.module';
 import { TechSkillsModule } from '@modules/tech-skills/tech-skills.module';
 import { ProjectsModule } from '@modules/projects/projects.module';
 
-/* Assets */
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,7 +27,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
     HttpClientModule,
     ReactiveFormsModule,
     AboutmeModule,

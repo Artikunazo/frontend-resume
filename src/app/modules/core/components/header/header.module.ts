@@ -5,7 +5,6 @@ import { HeaderComponent } from './header/header.component';
 import { BasicInfoModule } from './basic-info/basic-info.module';
 import { SocialNetworksModule } from './social-networks/social-networks.module';
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
