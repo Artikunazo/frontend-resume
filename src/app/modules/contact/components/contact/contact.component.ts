@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { FormsHelper } from '@contact/helpers/forms.helper';
 import { ResumeService } from '@core/services/resume/resume.service';
 import { Subscription } from 'rxjs';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'contact',
@@ -10,7 +11,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, OnDestroy {
-  contactForm: FormGroup;
+  public contactForm: FormGroup;
+  public loading = false;
 
   private _subs = new Subscription();
 
@@ -25,12 +27,24 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   sendForm() {
+    this.loading = true;
     const contactInfo = { ...this.contactForm.value };
 
     this._subs.add(
       this._resumeService.sendContactForm(contactInfo)
-      .subscribe((response) => {
-        console.log(response.message);
+      .subscribe({
+        next: (response) => {
+
+          Notify.success(response.message);
+  
+          this.contactForm.reset();
+          this.loading = false;
+        },
+        error: (error) => {
+          Notify.failure(error.statusText);
+          console.log(error); 
+          this.loading = false;
+        }
       })
     );
   }

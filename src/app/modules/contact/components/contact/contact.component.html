@@ -58,7 +58,7 @@
         <button
           type="submit"
           class="btn btn-primary"
-          [disabled]="contactForm.invalid"
+          [disabled]="contactForm.invalid || loading"
         >
           Send
         </button>

@@ -15,6 +15,9 @@ export class ResumeService {
 
   private resumeApi = 'https://nth-suprstate-329822.uc.r.appspot.com/v1/resume/';
   private resume$: Subject<IResume> = new Subject();
+  private options = {
+    headers: {'Content-Type': 'application/json'}
+  };
 
   constructor(
     private _httpClient: HttpClient
@@ -56,6 +59,7 @@ export class ResumeService {
   }
 
   sendContactForm(data: IContact) : Observable<any> {
-    return this._httpClient.post(this.resumeApi + 'contact', data);
+    return this._httpClient.post(
+      this.resumeApi + 'contact', JSON.stringify(data), this.options);
   }
 }
