@@ -12,6 +12,9 @@
 
 .small-bio{
   color: var(--small-bio-color);
+  &--description{
+    font-weight: 400;
+  }
 }
 
 small.small-bio{
