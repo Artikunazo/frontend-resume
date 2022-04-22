@@ -65,6 +65,9 @@
       "@basic-info/*": [
         "src/app/modules/core/components/header/basic-info/*"
       ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
     }
   },
   "angularCompilerOptions": {

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_url: 'https://resume-api-344305.uc.r.appspot.com/',
+  api_version: 'v1/'
+  //resume/all
 };
 
 /*

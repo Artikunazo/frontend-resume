@@ -7,13 +7,14 @@ import { map } from 'rxjs/operators';
 import { IApiResponse } from '@core/models/api-response.model';
 import { ITechSkills } from '@modules/tech-skills/models/tech-skills.model';
 import { IContact } from '@modules/contact/models/contact.model';
+import { environment } from '@environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResumeService {
 
-  private resumeApi = 'https://nth-suprstate-329822.uc.r.appspot.com/v1/resume/';
+  private resumeApi = `${environment.api_url}${environment.api_version}resume/`;
   private resume$: Subject<IResume> = new Subject();
   private options = {
     headers: {'Content-Type': 'application/json'}
