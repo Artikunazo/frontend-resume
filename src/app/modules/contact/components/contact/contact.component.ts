@@ -23,6 +23,24 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.contactForm = this._formsHelper.createForm('contact');
   }
 
+  get nameControl() {
+    return this.contactForm.get('name');
+  }
+
+  get emailControl() {
+    return this.contactForm.get('email');
+  }
+
+  get subjectControl() {
+    return this.contactForm.get('subject');
+  }
+
+  get messageControl() {
+    return this.contactForm.get('message');
+  }
+
+
+
   ngOnInit(): void {
   }
 
@@ -36,13 +54,13 @@ export class ContactComponent implements OnInit, OnDestroy {
         next: (response) => {
 
           Notify.success(response.message);
-  
+
           this.contactForm.reset();
           this.loading = false;
         },
         error: (error) => {
           Notify.failure(error.statusText);
-          console.log(error); 
+          console.log(error);
           this.loading = false;
         }
       })

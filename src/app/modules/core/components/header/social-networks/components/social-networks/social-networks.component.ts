@@ -32,11 +32,12 @@ export class SocialNetworksComponent implements OnInit {
     .subscribe((socialNetworks: IResume[keyof IResume]) => {
 
       this.socialNetworks = (socialNetworks as ISocialNetworks[]);
+      this.socialNetworks.reverse();
 
       this.socialNetworks = this.socialNetworks.filter(item => {
         return Object.keys(this.iconsAvailable).includes(item.name.toLowerCase());
       });
-      
+
     });
   }
 

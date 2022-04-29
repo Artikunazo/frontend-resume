@@ -4,8 +4,8 @@
 @import './assets/css/fonts.css';
 
 html, body{
-    margin:0;
-    padding: 0
+  margin:0;
+  padding: 0
 }
 
 .no-margin {
@@ -72,6 +72,11 @@ html, body{
   justify-content: center;
   align-items: center;
 }
+
+input, textarea{
+  font-family: 'Ubuntu', sans-serif;
+}
+
 
 @media (max-width: 575.98px){
   .section-container{

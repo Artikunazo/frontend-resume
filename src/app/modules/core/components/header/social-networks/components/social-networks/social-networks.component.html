@@ -1,17 +1,17 @@
-<ul 
-  *ngIf="socialNetworks" 
+<ul
+  *ngIf="socialNetworks"
   class="row no-padding no-margin width-100"
 >
-  <li 
-    *ngFor="let item of socialNetworks" 
+  <li
+    *ngFor="let item of socialNetworks"
     class="
-      col-6 
+      col-6
       text-center-xs
-      social__container 
+      social__container
     "
   >
-    <a href="#" class="social__link">
-      <fa-icon 
+    <a [href]="item.url" class="social__link" target="_blank">
+      <fa-icon
         *ngIf="item.name"
         [icon]="getIcon(item?.name)"
         [styles]="iconStyles"

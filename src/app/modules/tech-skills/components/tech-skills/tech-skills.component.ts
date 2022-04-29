@@ -22,19 +22,13 @@ export class TechSkillsComponent implements OnInit, OnDestroy {
       this._resumeService
       .getInfoByCategory('techSkills')
       .subscribe((skills) => {
-        this.skills = skills;
+        this.skills = skills.sort();
       })
     );
   }
 
   findIconSkill(skill: string): string {
-    skill = skill.toLowerCase();
-
-    if (skill.includes('api rest')) {
-      return '/assets/images/icons/' + 
-        skill.replace(' ', '-') + 
-        '-icon.svg';
-    }
+    skill = skill.toLowerCase().replace(/\s/g, '-');
 
     if(skill.includes('gary-css')){
       return '/assets/images/icons/open-source-icon.svg';
