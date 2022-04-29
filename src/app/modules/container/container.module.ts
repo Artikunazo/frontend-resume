@@ -6,6 +6,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { AboutmeModule } from '@aboutme/aboutme.module';
 import { ContactModule } from '@contact/contact.module';
 import { TechSkillsModule } from '@tech-skills/tech-skills.module'
+import { ProjectsModule } from '@projects/projects.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TechSkillsModule } from '@tech-skills/tech-skills.module'
     CommonModule,
     AboutmeModule,
     ContactModule,
-    TechSkillsModule
+    TechSkillsModule,
+    ProjectsModule
   ],
   exports: [
     ContainerComponent
