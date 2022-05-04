@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { ResumeService } from '@core/services/resume/resume.service';
-import { ISocialNetworks } from '@social-networks/models/social-networks.model';
+import { ISocialNetworks } from '@shared/models/social-networks.model';
 import { IResume } from '@core/models/resume.model';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { ResumeService } from '@core/services/resume/resume.service';
 import { Subscription } from 'rxjs';
 import { IProject } from '../models/projects.model';
@@ -7,6 +7,7 @@ import { IProject } from '../models/projects.model';
   selector: 'projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   public projects: IProject[] = [];

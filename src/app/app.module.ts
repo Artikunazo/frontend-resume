@@ -12,11 +12,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from '@core/core.module'
 
 /* Container */
-import { AboutmeModule } from '@modules/aboutme/aboutme.module';
-import { ContactModule } from '@modules/contact/contact.module';
 import { ContainerModule } from '@modules/container/container.module';
-import { TechSkillsModule } from '@modules/tech-skills/tech-skills.module';
-import { ProjectsModule } from '@modules/projects/projects.module';
 
 
 @NgModule({
@@ -29,11 +25,7 @@ import { ProjectsModule } from '@modules/projects/projects.module';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutmeModule,
-    ContactModule,
     ContainerModule,
-    TechSkillsModule,
-    ProjectsModule,
     CoreModule
   ],
   bootstrap: [AppComponent],
