@@ -24,6 +24,6 @@ export class AppComponent {
         content: 'Software Engineer, Frontend Developer, Angular Developer',
       },
     ]);
-    this._title.setTitle('Arturo Casas - Software Engineer');
+    this._title.setTitle('Arturo Casas | Software Engineer');
   }
 }
