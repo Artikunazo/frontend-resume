@@ -5,7 +5,7 @@ import { ResumeService } from '@core/services/resume/resume.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   constructor(
@@ -18,8 +18,11 @@ export class AppComponent {
     // Set Meta Tags
     this._meta.addTags([
       { name: 'author', content: 'Arturo Casas' },
-      { name: 'description', content: 'Arturo Casas - Software Engineer' },
-      { name: 'keywords', content: ''}
+      { name: 'description', content: 'Software Engineer' },
+      {
+        name: 'keywords',
+        content: 'Software Engineer, Frontend Developer, Angular Developer',
+      },
     ]);
     this._title.setTitle('Arturo Casas - Software Engineer');
   }
