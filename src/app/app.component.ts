@@ -2,12 +2,16 @@ import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ResumeService } from '@core/services/resume/resume.service';
 
+declare let gtag: Function;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
+
   constructor(
     private _resumeService: ResumeService,
     private _meta: Meta,
@@ -25,5 +29,9 @@ export class AppComponent {
       },
     ]);
     this._title.setTitle('Arturo Casas | Software Engineer');
+
+    // GA
+    let request = new XMLHttpRequest();
+    gtag('Conversion', request.getAllResponseHeaders());
   }
 }
