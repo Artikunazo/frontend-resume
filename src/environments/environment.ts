@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   api_url: 'https://resume-api-344305.uc.r.appspot.com/',
   api_version: 'v1/',
-  ga: 'G-C6R09CDCM7'
+  gaId: 'G-C6R09CDCM7'
   //resume/all
 };
 

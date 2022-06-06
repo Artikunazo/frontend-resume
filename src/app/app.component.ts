@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ResumeService } from '@core/services/resume/resume.service';
+import { environment } from '@environments/environment';
 
 declare let gtag: Function;
 
@@ -31,7 +32,9 @@ export class AppComponent {
     this._title.setTitle('Arturo Casas | Web Software Engineer');
 
     // GA
-    let request = new XMLHttpRequest();
-    gtag('Conversion', request.getAllResponseHeaders());
+    const request = new XMLHttpRequest();
+    gtag('Visit', environment.gaId, {
+      data: request.getAllResponseHeaders()
+    });
   }
 }
