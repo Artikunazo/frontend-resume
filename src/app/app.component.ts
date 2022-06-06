@@ -22,13 +22,13 @@ export class AppComponent {
     // Set Meta Tags
     this._meta.addTags([
       { name: 'author', content: 'Arturo Casas' },
-      { name: 'description', content: 'Software Engineer' },
+      { name: 'description', content: 'Web Software Engineer' },
       {
         name: 'keywords',
-        content: 'Software Engineer, Frontend Developer, Angular Developer',
+        content: 'Web Software Engineer, Frontend Developer, Angular Developer, Javascript Developer',
       },
     ]);
-    this._title.setTitle('Arturo Casas | Software Engineer');
+    this._title.setTitle('Arturo Casas | Web Software Engineer');
 
     // GA
     let request = new XMLHttpRequest();
