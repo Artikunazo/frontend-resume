@@ -5,10 +5,9 @@
     *ngFor="let project of projects; let isLast = last; let isOdd = odd; let isEven = even"
   >
     <div
-      class="xs sm text-center"
+      class="xs sm text-center md-6 lg-6"
       [ngClass]="{
         'md lg': isLast && isOdd,
-        'md-6 lg-6': !isLast || (isLast && isEven)
       }"
     >
       <div class="card">
