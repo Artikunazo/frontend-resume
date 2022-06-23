@@ -2,13 +2,13 @@
 
 <div class="row section-container">
   <ng-container
-    *ngFor="let project of projects; let isLast = last; let isOdd = odd"
+    *ngFor="let project of projects; let isLast = last; let isOdd = odd; let isEven = even"
   >
     <div
       class="xs sm text-center"
       [ngClass]="{
         'md lg': isLast && isOdd,
-        'md-6 lg-6': !isLast
+        'md-6 lg-6': !isLast || (isLast && isEven)
       }"
     >
       <div class="card">
