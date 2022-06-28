@@ -15,6 +15,7 @@ import { environment } from '@environments/environment';
 export class ResumeService {
 
   private resumeApi = `${environment.api_url}`;
+  private contactApi = environment.contact_api;
   private resume$: Subject<IResume> = new Subject();
   private options = {
     headers: {'Content-Type': 'application/json'}
@@ -61,6 +62,6 @@ export class ResumeService {
 
   sendContactForm(data: IContact) : Observable<any> {
     return this._httpClient.post(
-      this.resumeApi + 'contact', JSON.stringify(data), this.options);
+      this.contactApi, JSON.stringify(data), this.options);
   }
 }
