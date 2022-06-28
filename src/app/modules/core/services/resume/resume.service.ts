@@ -14,7 +14,7 @@ import { environment } from '@environments/environment';
 })
 export class ResumeService {
 
-  private resumeApi = `${environment.api_url}${environment.api_version}resume/`;
+  private resumeApi = `${environment.api_url}`;
   private resume$: Subject<IResume> = new Subject();
   private options = {
     headers: {'Content-Type': 'application/json'}
@@ -25,7 +25,7 @@ export class ResumeService {
   ) {}
 
   getResume() : void {
-    this._httpClient.get<IApiResponse>(this.resumeApi + 'all')
+    this._httpClient.get<IApiResponse>(this.resumeApi)
     .pipe(
       map(
         (resume: IApiResponse) => resume.result
