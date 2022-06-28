@@ -28,7 +28,7 @@ export class ResumeService {
     this._httpClient.get<IApiResponse>(this.resumeApi)
     .pipe(
       map(
-        (resume: IApiResponse) => resume.result
+        (resume: IApiResponse) => resume
       )
     )
     .subscribe((resume) => {
