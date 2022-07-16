@@ -26,10 +26,10 @@ export class ResumeService {
   ) {}
 
   getResume() : void {
-    this._httpClient.get<IResume>(this.resumeApi)
+    this._httpClient.get<IApiResponse>(this.resumeApi)
     .pipe(
       map(
-        (resume: IResume) => resume
+        (resume: IResume) => resume.result
       )
     )
     .subscribe((resume) => {
