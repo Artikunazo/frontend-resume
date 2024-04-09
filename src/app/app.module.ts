@@ -9,10 +9,10 @@ import { AppComponent } from './app.component';
 
 
 /* Core */
-import { CoreModule } from '@core/core.module'
+import { CoreModule } from '@app/core/core.module'
 
 /* Container */
-import { ContainerModule } from '@modules/container/container.module';
+import { ContainerModule } from '@app/container/container.module';
 
 
 @NgModule({

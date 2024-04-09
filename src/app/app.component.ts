@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ResumeService } from '@core/services/resume/resume.service';
+import { ResumeService } from '@app/api/resume.service';
 import { environment } from '@environments/environment';
 
 declare let gtag: Function;
