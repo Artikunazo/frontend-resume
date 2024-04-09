@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { FormsHelper } from '@contact/helpers/forms.helper';
 import { ResumeService } from '@core/services/resume/resume.service';
 import { Subscription } from 'rxjs';
@@ -11,7 +11,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, OnDestroy {
-  public contactForm: FormGroup;
+  public contactForm: UntypedFormGroup;
   public loading = false;
 
   private _subs = new Subscription();

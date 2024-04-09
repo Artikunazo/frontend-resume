@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +8,10 @@ export class FormsHelper {
   stringPattern = /[a-zA-Z]+/g;
   
   constructor(
-    private _formBuilder: FormBuilder
+    private _formBuilder: UntypedFormBuilder
   ){ }
 
-  createForm(formType: string) : FormGroup {
+  createForm(formType: string) : UntypedFormGroup {
 
     let formObj = {};
 
