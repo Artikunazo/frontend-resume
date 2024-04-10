@@ -11,6 +11,7 @@ import {CoreModule} from '@app/core/core.module';
 
 /* Container */
 import {ContainerModule} from '@app/container/container.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -20,6 +21,7 @@ import {ContainerModule} from '@app/container/container.module';
 		ReactiveFormsModule,
 		ContainerModule,
 		CoreModule,
+  FontAwesomeModule,
 	],
 	bootstrap: [AppComponent],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
