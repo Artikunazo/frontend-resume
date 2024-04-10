@@ -25,7 +25,7 @@ export class AppComponent {
 			{
 				name: 'keywords',
 				content:
-					'web software engineer, frontend developer, angular Developer, javascript developer, frontend engineer, fullstack mean',
+					'web software engineer, frontend developer, angular Developer, javascript developer, frontend engineer, fullstack mean, software engineer, engineer software engineer, engineer in software',
 			},
 		]);
 		this._title.setTitle('Arturo Casas | Web Software Engineer');
