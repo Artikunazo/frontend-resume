@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { IResume } from '@app/models/resume.model';
@@ -8,33 +8,38 @@ import { IApiResponse } from '@app/models/api-response.model';
 import { ITechSkills } from '@app/models/tech-skills.model';
 import { IContact } from '@app/models/contact.model';
 import { environment } from '@environments/environment';
+import * as data from "./data.json";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResumeService {
 
-  private resumeApi = `${environment.api_url}`;
-  private contactApi = environment.contact_api;
+  private readonly httpClient = inject(HttpClient);
+
+  private readonly jsonFileName = 'data.json';
+  private readonly contactApi = environment.contact_api;
   private resume$: Subject<IResume> = new Subject();
   private options = {
     headers: {'Content-Type': 'application/json'}
   };
 
-  constructor(
-    private _httpClient: HttpClient
-  ) {}
-
   getResume() : void {
-    this._httpClient.get<IApiResponse>(this.resumeApi)
+    this.httpClient.get<IApiResponse>(this.jsonFileName)
     .pipe(
       map(
         (resume: IApiResponse) => resume.result
       )
     )
-    .subscribe((resume) => {
-      this.resume$.next(resume);
-      this.resume$.complete();
+    .subscribe({
+      next: (resume) => {
+        this.resume$.next(resume);
+        this.resume$.complete();
+      },
+      error: () => {
+        this.resume$.next(data as any);
+        this.resume$.complete();
+      }
     });
   }
 
@@ -61,7 +66,7 @@ export class ResumeService {
   }
 
   sendContactForm(data: IContact) : Observable<any> {
-    return this._httpClient.post(
+    return this.httpClient.post(
       this.contactApi, JSON.stringify(data), this.options);
   }
 }
