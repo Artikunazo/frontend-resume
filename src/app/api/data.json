@@ -42,6 +42,13 @@
 	],
 	"projects": [
 		{
+			"url_live": "https://dashboard-kanban-xzog.vercel.app/",
+			"name": "Kanban Dashboard",
+			"description": "A trello-like application. For this implementation I did use <span class=\"text-link\">Angular 17</span> and <a\n  href=\"https://www.npmjs.com/package/gary-css?activeTab=readme\"\n  target=\"_blank\"\n  class=\"text-link\"\n  >Gary-CSS</a\n> as layout framework.  <span class=\"text-link\">NGRX (Redux)</span> like a Pattern Design,  furthermore of use <span class=\"text-link\">Local storage</span> so save data in a browser storage.",
+			"screenshot_url": "",
+			"url_repo": "https://github.com/Artikunazo/dashboard-kanban"
+		},
+		{
 			"url_live": "https://artikunazo-searcher.netlify.app/",
 			"name": "Rick and Morty Searcher",
 			"description": "Using a Reactive Input, get and show Characters of Rick And Morty series like\nresults, taking the value of the Reactive Input.\nFor this challenge I did use <span class=\"text-link\">Angular 16</span> and\n<a\n  href=\"https://www.npmjs.com/package/gary-css\"\n  target=\"_blank\"\n  class=\"text-link\"\n  >Gary CSS</a\n>\nas layout framework, furthermore of use\n<a href=\"https://rickandmortyapi.com/\" target=\"_blank\" class=\"text-link\"\n  >Rick and Morty API</a\n>.\n",
